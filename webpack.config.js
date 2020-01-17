@@ -20,6 +20,10 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.txt$/,
+                use: 'raw-loader'
             }
         ]
     },
