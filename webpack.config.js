@@ -22,7 +22,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.txt$/,
+                test: /\.glsl$/,
                 use: 'raw-loader'
             }
         ]
