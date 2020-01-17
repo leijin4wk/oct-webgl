@@ -1,10 +1,13 @@
 import {initShaderProgram} from './util/shaderUtil'
 import vertexShader from './shader/vertexShader.glsl'
 import fragmentShader from './shader/fragmentShader.glsl'
-let canvas = document.getElementById("canvas");
-let gl = canvas.getContext("webgl");
+
+const canvas = document.getElementById("canvas");
+
+const gl = canvas.getContext("webgl");
 
 const shaderProgram = initShaderProgram(gl, vertexShader, fragmentShader);
+
 gl.useProgram(shaderProgram);
 
 let positionLocation = gl.getAttribLocation(shaderProgram, "a_position");
