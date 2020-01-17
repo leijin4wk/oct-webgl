@@ -1,5 +1,7 @@
 import {initShaderProgram} from './util/shaderUtil'
+
 import vertexShader from './shader/vertexShader.glsl'
+
 import fragmentShader from './shader/fragmentShader.glsl'
 
 const canvas = document.getElementById("canvas");
@@ -16,17 +18,7 @@ let buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 
-gl.bufferData(
-    gl.ARRAY_BUFFER,
-    new Float32Array([
-        -1.0, -1.0,
-        1.0, -1.0,
-        -1.0,  1.0,
-        -1.0,  1.0,
-        1.0, -1.0,
-        1.0,  1.0]),
-    gl.STATIC_DRAW);
-
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1.0, -1.0, 1.0, -1.0, -1.0,  1.0, -1.0,  1.0, 1.0, -1.0, 1.0,  1.0]), gl.STATIC_DRAW);
 
 gl.enableVertexAttribArray(positionLocation);
 
