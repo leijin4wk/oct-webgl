@@ -37,6 +37,7 @@ module.exports = {
         })
     ],
     devServer: {
+        open: true,
         contentBase: path.resolve(__dirname, 'dist'),
         compress: true,
         host: 'localhost',
